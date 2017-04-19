@@ -26,7 +26,7 @@ For more information about [Custom Authorizers](http://docs.aws.amazon.com/apiga
 
 ### Required Environment Variables
 
-See [serverless.yml](serverless.yml)
+See [serverless.yml](serverless.yml#L9)
 
 - `AUTH0_CLIENT_SECRET`
 
