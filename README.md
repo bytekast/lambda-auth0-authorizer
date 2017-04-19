@@ -3,6 +3,10 @@ AWS Lambda Auth0 Authorizer for API Gateway
 
 Uses [Auth0](https://auth0.com/) for verification. This custom authorizer simply validates the JWT token passed via the `Authorization: Bearer xxxxxxxxxxxxxxxx` API request header.
 
+The decoded JWT `claims` object is passed to the `context` object of the response. [API Gateway]() then forwards the claims/context to the Lambda function handler. 
+
+For more information about [Custom Authorizers](http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html#api-gateway-custom-authorizer-input), see the [AWS Docs](http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html#api-gateway-custom-authorizer-input).
+
 ### Local Development Prerequisites
 
 > Install Gradle
@@ -33,16 +37,6 @@ See [serverless.yml](serverless.yml)
 > To build the project
 
 `gradle clean build`
-<br/>
-
-> To publish the artifacts to the S3 Maven Repository
-
-`gradle publish`
-<br/>
-
-> To cut a release, run the command below and follow the instructions.
-
-`gradle release`
 <br/>
 
 
