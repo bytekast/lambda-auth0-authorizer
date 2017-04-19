@@ -1,4 +1,4 @@
-package com.stedi.auth
+package com.bytekast.auth
 
 import com.amazonaws.services.lambda.runtime.Context
 import com.auth0.jwt.JWT
