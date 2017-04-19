@@ -1,0 +1,17 @@
+service: auth0-authorizer
+
+provider:
+  name: aws
+  runtime: java8
+  timeout: 300
+  memorySize: 256
+  environment:
+    AUTH0_CLIENT_SECRET: 'Replace this with your client secret!!!!'
+
+package:
+  artifact: build/distributions/lambda-auth0-authorizer-0.0.1-SNAPSHOT.zip
+
+
+functions:
+  authorize:
+    handler: com.bytekast.auth.AuthorizerHandler::handleRequest
